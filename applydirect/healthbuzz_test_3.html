@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Start GPT Async Tag -->
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var gptadslots = [];
+  var googletag = googletag || {cmd:[]};
+</script>
+<script>
+  googletag.cmd.push(function() {
+
+    var mapBanner = googletag.sizeMapping().addSize([0, 0], [[320, 100]]).addSize([767, 0], [[728, 90]]).build();
+    var mapListBanner = googletag.sizeMapping().addSize([0, 0], []).addSize([767, 0], [[728, 90]]).build();
+    var mapMedRecHalfPage = googletag.sizeMapping().addSize([0, 0], []).addSize([1024, 0], [[300, 600],[300, 250]]).build();
+
+    gptadslots.push(googletag.defineSlot('/180920693/HealthBuzz/jobsearch', [[728,90]], 'div-gpt-ad-banner-1')
+		.setTargeting('pos', ['1'])
+		.defineSizeMapping(mapBanner)
+		.addService(googletag.pubads()));
+
+    gptadslots.push(googletag.defineSlot('/180920693/HealthBuzz/jobsearch', 'fluid', 'div-gpt-ad-native-1')
+        .setTargeting('pos', ['1'])
+		.addService(googletag.pubads()));
+ 
+    gptadslots.push(googletag.defineSlot('/180920693/HealthBuzz/jobsearch', [[300, 600],[300, 250]], 'div-gpt-ad-mpu-1')
+		.setTargeting('pos', ['1'])
+		.defineSizeMapping(mapMedRecHalfPage)
+		.addService(googletag.pubads()));
+
+    gptadslots.push(googletag.defineSlot('/180920693/HealthBuzz/jobsearch', [[728,90]], 'div-gpt-ad-banner-2')
+		.setTargeting('pos', ['2'])
+		.defineSizeMapping(mapListBanner)
+		.addService(googletag.pubads()));
+
+	gptadslots.push(googletag.defineSlot('/180920693/HealthBuzz/jobsearch', [[728,90]], 'div-gpt-ad-banner-3')
+		.setTargeting('pos', ['3'])
+		.defineSizeMapping(mapListBanner)
+		.addService(googletag.pubads()));
+		
+    gptadslots.push(googletag.defineSlot('/180920693/HealthBuzz/jobsearch', [[728,90]], 'div-gpt-ad-banner-footer')
+		.setTargeting('pos', ['footer'])
+		.defineSizeMapping(mapBanner)
+		.addService(googletag.pubads()));
+		
+    googletag.pubads()
+	.setTargeting('category1', ['administration-admissions-support'])
+	.setTargeting('category2', ['rostering-scheduling'])
+        .setTargeting('location1', ['sydney'])
+        .setTargeting('location2', ['cbd-inner-west-eastern-suburbs']);
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+
+</head>
+<body>
+
+<p>Header: Mobile Banner 320x100 (up to 768px), Leaderboard 728x90 (above 768px)</p>
+<div id='div-gpt-ad-banner-1'>
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-banner-1'); 
+	});
+  </script>
+</div>
+
+<p>Native ad (example styling)</p>
+<div id='div-gpt-ad-native-1'>
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-native-1'); 
+	});
+  </script>
+</div>
+
+<p>Med Rec 300x250 / Half Page 300x600 (above 1024px)</p>
+<div id='div-gpt-ad-mpu-1'>
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-mpu-1'); 
+	});
+  </script>
+</div>
+
+
+<p>Listings: Leaderboard 728x90 after 5th job (above 768px)</p>
+<div id='div-gpt-ad-banner-2'>
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-banner-2'); 
+	});
+  </script>
+</div>
+
+<p>Listings: Leaderboard 728x90 after 10th job (above 768px)</p>
+<div id='div-gpt-ad-banner-3'>
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-banner-3'); 
+	});
+  </script>
+</div>
+
+
+<p>Footer: Mobile Banner 320x100 (up to 768px), Leaderboard 728x90 (above 768px)</p>
+<div id='div-gpt-ad-banner-footer'>
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-banner-footer'); 
+	});
+  </script>
+</div>
+
+
+</body>
+</html>
