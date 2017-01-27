@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+  var gptadid = "div-gpt-ad-Leaderboard-1",
+    gptadslots = [],
+    googletag = googletag || {},
+    gptadrefreshed = !1,
+    adAlmostVisibleScrollValue = 300;
+  googletag.cmd = googletag.cmd || [],
+    function() {
+      var e = document.createElement("script");
+      e.async = !0, e.type = "text/javascript", e.src = ("https:" == document.location.protocol ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+      var t = document.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(e, t), e.onload = function() {
+        googletag.cmd.push(function() {
+          var e = googletag.sizeMapping().addSize([0, 0], [728, 90]).build(),
+            t = googletag.sizeMapping().addSize([600, 0], [1, 1]).addSize([0, 0], []).build();
+          gptadslots[0] = googletag.defineOutOfPageSlot("/107328191/JETSTARLEADERBOARDDEALSPAGE", "div-gpt-ad-oop").defineSizeMapping(t).addService(googletag.pubads()), gptadslots[1] = googletag.defineSlot("/107328191/JETSTARLEADERBOARDDEALSPAGE", [728, 90], gptadid).defineSizeMapping(e).setTargeting("pos", ["1"]).setCollapseEmptyDiv(!0, !0).addService(googletag.pubads()), googletag.pubads().addEventListener("slotRenderEnded", function(e) {
+            if (e.slot === gptadslots[1] && !e.isEmpty) {
+              var t = document.getElementById(gptadid).getElementsByTagName("div")[0].getElementsByTagName("iframe")[0];
+              t.onload = function() {
+                var e = t.contentDocument || t.contentWindow.document,
+                  a = e.getElementsByTagName("body")[0].firstChild.innerHTML;
+                if (a.length > 0) {
+                  var o = document.getElementsByClassName("ad-banner--leaderboard");
+                  o[0].className = o[0].className.replace(/\bis-collapsed\b/, ""), o[0].setAttribute("aria-hidden", "false")
+                }
+              }
+            }
+          }), googletag.pubads().enableSingleRequest(), googletag.pubads().setTargeting("medianame", ["home"]), googletag.pubads().setTargeting("culture", ["en-AU"]), googletag.pubads().setTargeting("lang", ["en"]), googletag.pubads().collapseEmptyDivs(!0), googletag.pubads().enableAsyncRendering(), googletag.pubads().disableInitialLoad(), googletag.enableServices()
+        });
+        var e = eventsHelper.debounce(function() {
+          window.scrollY >= adAlmostVisibleScrollValue && !gptadrefreshed && (googletag.cmd.push(function() {
+            googletag.pubads().refresh(gptadslots)
+          }), gptadrefreshed = !0, window.removeEventListener("scroll", e))
+        }, 250);
+        document.getElementById(gptadid) && window.addEventListener("scroll", e)
+      }
+    }();
+</script>
+</body>
+</html>

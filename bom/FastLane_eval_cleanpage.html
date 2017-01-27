@@ -1,0 +1,159 @@
+<!--/* LEGAL NOTICE: COPYRIGHT 2015 THE RUBICON PROJECT, INC.  ALL RIGHTS RESERVED. THIS CODE CONTAINS TRADE SECRETS OR OTHERWISE CONFIDENTIAL AND/OR PROPRIETARY INFORMATION THAT IS THE EXCLUSIVE INTELLECTUAL PROPERTY OF THE RUBICON PROJECT, INC.  AND IS PROTECTED BY COPYRIGHT, TRADE SECRET AND/OR OTHER STATE AND FEDERAL LAW.  SEE http://bit.ly/1g7QAOO FOR FULL TERMS AND CONDITIONS. */ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type='text/javascript'>
+var setSite = function(uri) {
+    var site, parser;
+    if (typeof(uri) === 'undefined' || uri === '' || uri.indexOf('http') < 0) {
+        uri = window.document.location.href;
+    }
+    parser = window.document.createElement('a');
+    parser.href = uri;
+    site = parser.hostname;
+    return site;
+};
+
+var rubicontag = rubicontag || {};
+    rubicontag.cmd = rubicontag.cmd || [];
+
+var gptadslots = [];
+var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+
+(function() {
+    // replace '<account_id>' with your rubicon project account id number
+    var account_id = 14062;
+    var rct = document.createElement('script');
+        rct.type = 'text/javascript';
+        rct.async = true;
+        rct.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') + '//ads.rubiconproject.com/header/' + account_id + '.js';
+    var node = document.getElementsByTagName('script')[0];
+        node.parentNode.appendChild(rct);
+})();
+
+rubicontag.cmd.push(function() {
+    // fastlane, including optional slot level position (setPosition), keyword (addKW), first party visitor (FPV) and/or inventory (FPI) data
+    // replace '<network-id>' with your DFP network id
+    // replace '<ad-unit-name>' with a unique string for your ad unit, typically matches your DFP ad unit name/path
+    // replace width and height with respective dimensions of the given slot. The array can have one or more dimensions listed, e.g. [[300, 250], [728, 90]]. If a dimension is not supported, no auction will be held for the specific dimension
+    // replace '<keyword>' with your single or multiple, comma separated, keyword string
+    // replace '<key>' with your key name and '<value>' with your single or multiple, comma separated, string of values
+    //rubicontag.addContext('<page-context-keyword>', ...);
+
+    rubicontag.defineSlot('/15557146/bom.gov.au/home', [[300, 250]], 'div-gpt-ad-medrec-1').setPosition('atf');
+
+    // optionally set global keyword (addKW), first party visitor (FPV) and/or inventory (FPI) data
+    // replace '<keyword>' with your keyword. can be called multiple times.
+    // replace '<key>' with your key name and '<value>' with your single value.
+
+    rubicontag.addKW('fastlane-prototype-test');
+    rubicontag.setFPI('domain', [setSite()]);
+	rubicontag.setFPV('aac',['NSW_PT023'])
+	rubicontag.setFPV('cur_district',['Northern Rivers'])
+	rubicontag.setFPV('cur_state',['NSW'])
+	rubicontag.setFPV('cur_suburb',['Byron Bay'])
+	rubicontag.setFPV('edu',['0'])
+	rubicontag.setFPV('hm_descrip',['cloudy'])
+	rubicontag.setFPV('hm_district',['West Sydney'])
+	rubicontag.setFPV('hm_max',['15 to 30'])
+	rubicontag.setFPV('hm_pollen',[''])
+	rubicontag.setFPV('hm_rain_chance',['10'])
+	rubicontag.setFPV('hm_rain_ob',['0.4'])
+	rubicontag.setFPV('hm_state',['NSW'])
+	rubicontag.setFPV('hm_suburb',['Richmond'])
+	rubicontag.setFPV('hm_uv',['Moderate'])
+	rubicontag.setFPV('hm_wind',['None'])
+	rubicontag.setFPV('is_bush',['N'])
+	rubicontag.setFPV('is_hiking',['N'])
+	rubicontag.setFPV('is_marine',['N'])
+	rubicontag.setFPV('is_ski',['N'])
+	rubicontag.setFPV('page_id',['1332091'])
+	rubicontag.setFPV('page_type',['home'])
+	rubicontag.setFPV('time_aest',['8'])
+
+    // run rubicontag
+    rubicontag.run(gptrun);
+});
+
+googletag.cmd.push(function() {
+    // define your GPT slots
+    // replace '<network-id>' with your DFP network id
+    // replace '<ad-unit-name>' with your DFP ad unit name/path
+    // replace width and height with their respective dimensions
+    // replace '<ad-unit-div-id'> with the unique ad unit div id for the element where the ad should render
+    // each slot definition should form part of the gptadslots array, gptadslots[0] =, gptadslots[1] =, etc.
+
+    gptadslots[0] = googletag.defineSlot('/15557146/bom.gov.au/home', [[300, 250]], 'div-gpt-ad-medrec-1').setTargeting('pos',['1']).addService(googletag.pubads());
+
+    for (var i=0; i<gptadslots.length; i++) {
+        rubicontag && rubicontag.setTargetingForGPTSlot && rubicontag.setTargetingForGPTSlot(gptadslots[i]);
+    };
+		googletag.pubads()
+			.setTargeting('env',['desktop'])
+			.set('page_url', 'http://www.bom.gov.au')
+.setTargeting('aac',['NSW_PT023'])
+.setTargeting('cur_district',['Northern Rivers'])
+.setTargeting('cur_state',['NSW'])
+.setTargeting('cur_suburb',['Byron Bay'])
+.setTargeting('edu',['0'])
+.setTargeting('hm_descrip',['cloudy'])
+.setTargeting('hm_district',['West Sydney'])
+.setTargeting('hm_max',['15 to 30'])
+.setTargeting('hm_pollen',[''])
+.setTargeting('hm_rain_chance',['10'])
+.setTargeting('hm_rain_ob',['0.4'])
+.setTargeting('hm_state',['NSW'])
+.setTargeting('hm_suburb',['Richmond'])
+.setTargeting('hm_uv',['Moderate'])
+.setTargeting('hm_wind',['None'])
+.setTargeting('is_bush',['N'])
+.setTargeting('is_hiking',['N'])
+.setTargeting('is_marine',['N'])
+.setTargeting('is_ski',['N'])
+.setTargeting('page_id',['1332091'])
+.setTargeting('page_type',['home'])
+.setTargeting('time_aest',['8'])
+	googletag.pubads().collapseEmptyDivs();
+    googletag.pubads().enableAsyncRendering();
+    googletag.enableServices();
+});
+
+var gptran = false;
+var gptrun = function() {
+    // don't run again if already ran
+        if (gptran) {
+        return;
+    }
+    gptran = true;
+
+    var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+    var useSSL = 'https:' === document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+};
+
+</script>
+
+</head>
+
+<body>
+
+<!--// replace '<ad-unit-div-id'> with a unique ad unit div id (.defineSlot & .display should match this) //-->
+<div id='div-gpt-ad-medrec-1'>
+<script type='text/javascript'>
+    // replace '<ad-unit-div-id'> with the unique ad unit div id for the element where the ad should render
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-medrec-1'); });
+</script>
+</div>
+
+
+
+</body>
+
+</html>    

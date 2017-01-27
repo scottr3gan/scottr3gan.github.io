@@ -1,0 +1,241 @@
+<html>
+<head>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+
+  var mappingLeaderboard = googletag.sizeMapping().
+		addSize([321, 0], [728, 90]).
+                addSize([0, 0], [300, 50]).
+                build();
+
+  var mappingMrec = googletag.sizeMapping().
+                addSize([0, 0], [300, 250]).
+		build();
+
+  var mapping1x1 = googletag.sizeMapping().
+		addSize([768, 0], [1, 1]).
+		addSize([0, 0], [0, 0]).
+		build();
+
+  var mappingSkyscraper = googletag.sizeMapping().
+		addSize([1024, 0], [160, 600]).
+		addSize([0, 0], [0, 0]).
+		build();
+
+  var mappingMobAnchor = googletag.sizeMapping().
+		addSize([768, 0], [0, 0]).
+		addSize([0, 0], [300, 50]).
+		build();
+
+  var mappingLogo = googletag.sizeMapping().
+		addSize([0, 0], [80, 40]).
+		build();
+
+  var mappingGalLeaderboard = googletag.sizeMapping().
+		addSize([1025, 0], [728, 90]).
+		addSize([769, 0], [0, 0]).
+                addSize([748, 0], [728, 90]).
+		addSize([0, 0], [300, 50]).
+		build();
+
+  var mappingGalMrec = googletag.sizeMapping().
+                addSize([1025, 0], [300, 250]).
+		addSize([769, 0], [300, 250]).
+                addSize([748, 0], [0, 0]).
+		addSize([0, 0], [0, 0]).
+		build();
+
+
+googletag.defineSlot('/39761691/arntesttag', [[1, 1],[0, 0]], '1x1').defineSizeMapping(mapping1x1).addService(googletag.pubads());
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec1').defineSizeMapping(mappingMrec).addService(googletag.companionAds()).addService(googletag.pubads()).setTargeting('pos', '1');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec2').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '2');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec3').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '3');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec4').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '4');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec5').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '5');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec6').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '6');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec7').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '7');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec8').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '8');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec9').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '9');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'mrec10').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', '10');
+googletag.defineSlot('/39761691/arntesttag', [[300, 50], [728, 90]], 'toplb').defineSizeMapping(mappingLeaderboard).addService(googletag.companionAds()).addService(googletag.pubads()).setTargeting('pos', '1');
+googletag.defineSlot('/39761691/arntesttag', [[300, 50], [728, 90]], 'bottomlb').defineSizeMapping(mappingLeaderboard).addService(googletag.pubads()).setTargeting('pos', '2');
+googletag.defineSlot('/39761691/arntesttag', [[160, 600], [0, 0]], 'widesky').defineSizeMapping(mappingSkyscraper).addService(googletag.pubads());
+googletag.defineSlot('/39761691/arntesttag', [[300, 50],[0, 0]], 'mobanchor').defineSizeMapping(mappingMobAnchor).addService(googletag.pubads()).setTargeting('pos', 'anchor').setCollapseEmptyDiv(true);
+googletag.defineSlot('/39761691/arntesttag', [80, 40], 'polllogo').defineSizeMapping(mappingLogo).addService(googletag.pubads()).setTargeting('pos', 'poll').setCollapseEmptyDiv(true);
+googletag.defineSlot('/39761691/arntesttag', [80, 40], 'podcastlogo').defineSizeMapping(mappingLogo).addService(googletag.pubads()).setTargeting('pos', 'podcast').setCollapseEmptyDiv(true);
+googletag.defineSlot('/39761691/arntesttag', [80, 40], 'showheaderlogo').defineSizeMapping(mappingLogo).addService(googletag.pubads()).setTargeting('pos', 'showheader').setCollapseEmptyDiv(true);
+googletag.defineSlot('/39761691/arntesttag', [[300, 250], [0, 0]], 'slightboxmrec').defineSizeMapping(mappingGalMrec).addService(googletag.pubads()).setTargeting('pos', 'gallery');
+googletag.defineSlot('/39761691/arntesttag', [300, 250], 'ingallerymrec').defineSizeMapping(mappingMrec).addService(googletag.pubads()).setTargeting('pos', 'ingallery');
+googletag.defineSlot('/39761691/arntesttag', [[300, 50], [728, 90], [0, 0]], 'slightboxlb').defineSizeMapping(mappingGalLeaderboard).addService(googletag.pubads()).setTargeting('pos', 'gallery');
+googletag.defineSlot('/39761691/arntesttag', [80, 40], 'gallerylogo').defineSizeMapping(mappingLogo).addService(googletag.pubads()).setTargeting('pos', 'gallery').setCollapseEmptyDiv(true);
+googletag.companionAds().setRefreshUnfilledSlots(true);
+googletag.pubads().enableVideoAds();
+googletag.enableServices();
+googletag.pubads().setTargeting('site', 'tba');
+googletag.pubads().setTargeting('sec1', 'tba');
+googletag.pubads().setTargeting('sec2', 'tba');
+googletag.pubads().setTargeting('sec3', 'tba');
+googletag.pubads().setTargeting('sec4', 'tba');
+googletag.pubads().setTargeting('env', 'arntestag');
+});
+</script>
+</head>
+<body>
+
+<!-- arn_adtag_1x1-->
+<div id='1x1'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('1x1'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec1-->
+<div id='mrec1'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec1'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec2-->
+<div id='mrec2'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec2'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec3-->
+<div id='mrec3'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec3'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec4-->
+<div id='mrec4'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec4'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec5-->
+<div id='mrec5'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec5'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec6-->
+<div id='mrec6'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec6'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec7-->
+<div id='mrec7'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec7'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec8-->
+<div id='mrec8'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec8'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec9-->
+<div id='mrec9'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec9'); });
+</script>
+</div>
+
+<!-- arn_adtag_mrec10-->
+<div id='mrec10'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mrec10'); });
+</script>
+</div>
+
+<!-- arn_adtag_toplb-->
+<div id='toplb'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('toplb'); });
+</script>
+</div>
+
+<!-- arn_adtag_bottomlb-->
+<div id='bottomlb'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('bottomlb'); });
+</script>
+</div>
+
+<!-- arn_adtag_mobanchor-->
+<div id='mobanchor'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('mobanchor'); });
+</script>
+</div>
+
+<!-- arn_adtag_polllogo-->
+<div id='polllogo'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('polllogo'); });
+</script>
+</div>
+
+<!-- arn_adtag_podcastlogo-->
+<div id='podcastlogo'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('podcastlogo'); });
+</script>
+</div>
+
+<!-- arn_adtag_showheaderlogo-->
+<div id='showheaderlogo'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('showheaderlogo'); });
+</script>
+</div>
+
+<!-- arn_adtag_widesky-->
+<div id='widesky'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('widesky'); });
+</script>
+</div>
+
+<!-- arntesttag_slightboxmrec -->
+<div id='slightboxmrec'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('slightboxmrec'); });
+</script>
+</div>
+
+<!-- arntesttag_ingallerymrec -->
+<div id='ingallerymrec'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('ingallerymrec'); });
+</script>
+</div>
+
+<!-- arntesttag_slightboxlb -->
+<div id='slightboxlb'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('slightboxlb'); });
+</script>
+</div>
+
+<!-- arntesttag_gallerylogo -->
+<div id='gallerylogo'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('gallerylogo'); });
+</script>
+</div>
+
+</body>
+
+</html>

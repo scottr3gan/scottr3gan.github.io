@@ -1,0 +1,73 @@
+<html>
+<head>
+<!-- ### DFP ad tags for site name | section | page type ### -->
+<!-- Place code in HEAD section of html page -->
+<!-- Start: GPT Async -->
+<script type='text/javascript'>
+	var gptadslots=[];
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function(){ var gads = document.createElement('script');
+		gads.async = true; gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+</script>
+<script type="text/javascript">
+	googletag.cmd.push(function() {
+	var mapLeaderboard = googletag.sizeMapping().addSize([729, 0], [728, 90]).addSize([0,0], []).build();
+	var mapMedRec = googletag.sizeMapping().addSize([0, 0], [300, 250]).build();
+	var mapMedRecHalfPage = googletag.sizeMapping().addSize([0, 0], [[300,600],[300,250]]).build();
+	var mapOutOfPage = googletag.sizeMapping().	addSize([729, 0], [1, 1]).addSize([0,0], []).build();
+
+	gptadslots[0]= googletag.defineOutOfPageSlot('/13534306/Test/responsive', 'div-gpt-ad-oop').defineSizeMapping(mapOutOfPage).addService(googletag.pubads());
+	gptadslots[1]= googletag.defineSlot('/13534306/Test/responsive', [728,90],'div-gpt-ad-Leaderboard-1').defineSizeMapping(mapLeaderboard).setTargeting('pos',['1']).addService(googletag.pubads());
+	gptadslots[2]= googletag.defineSlot('/13534306/Test/responsive', [[300,600],[300,250]],'div-gpt-ad-MedRecHalfPage-1').defineSizeMapping(mapMedRecHalfPage).setTargeting('pos',['1']).addService(googletag.pubads());
+	
+	// googletag.pubads().enableSingleRequest();
+	googletag.pubads().setTargeting('pagetype',['home'])
+	googletag.pubads().setTargeting('env',['test']);
+	// Add additional lines for page-level custom targeting
+	googletag.pubads().collapseEmptyDivs();
+	googletag.pubads().enableAsyncRendering();
+	googletag.enableServices();
+	});
+</script>
+<!-- End: GPT -->
+</head>
+<body>
+<p>
+
+<!-- Place code in BODY section of HTML page -->
+
+
+
+728x90 pos 1
+
+<div id='div-gpt-ad-Leaderboard-1'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-Leaderboard-1'); });
+	</script>
+</div>
+<p>
+300x600/300x250 pos 1
+
+<div id='div-gpt-ad-MedRecHalfPage-1'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-MedRecHalfPage-1'); });
+	</script>
+</div>
+<p>
+Out of page
+
+<div id='div-gpt-ad-oop'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-oop'); });
+	</script>
+</div>
+
+</body>
+
+</html>

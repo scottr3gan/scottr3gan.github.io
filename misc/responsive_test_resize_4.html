@@ -1,0 +1,91 @@
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>  Test DFP Ads</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+var mapping2 = googletag.sizeMapping().
+        addSize([300, 200], [100, 100]).
+        addSize([470, 200], [300, 250]).
+        addSize([1000, 200], [336,280]).
+        build();
+window.slot2= googletag.defineSlot('/1084798/Test_Multi_Sidebar', [300,250], 'div-gpt-ad-1393979881710-3').
+defineSizeMapping(mapping2).
+addService(googletag.pubads()).
+setCollapseEmptyDiv(true);
+var mapping = googletag.sizeMapping().
+        addSize([320, 200], [320, 50]).
+        addSize([320, 500], [300, 75]).
+        addSize([480, 200], [468, 60]).
+        addSize([768, 200], [728, 90]).
+        addSize([1000, 200], [970,90]).
+        build();
+window.slot1= googletag.defineSlot(
+'/1084798/Test_Multi_Width', [320,50], 'div-gpt-ad-1393979881710-0').
+defineSizeMapping(mapping).
+addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+<script>
+  var _now = Date.now || function() { return new Date().getTime(); };
+  var _debounce = function(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+document.getElementById('width').innerHTML = window.innerWidth || document.documentElement.clientWidth;
+
+window.addEventListener("resize", _debounce(function() {
+    console.log ("Doing refresh");
+    document.getElementById ("width").innerHTML = window.innerWidth || document.documentElement.clientWidth;
+    googletag.pubads().refresh([window.slot1,window.slot2]);
+  }, 200)
+);
+</script>
+
+<div id='div-gpt-ad-1393979881710-0' class="wide-ad">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393979881710-0'); });
+</script>
+</div>
+
+<p>&nbsp;</p>
+
+
+<div id='div-gpt-ad-1393979881710-3' class="side-ad">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393979881710-3'); });
+</script>
+</div>
+ 
+</body>
+</html>

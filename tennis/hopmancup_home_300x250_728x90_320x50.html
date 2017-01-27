@@ -1,0 +1,42 @@
+*** PLACE IN HEAD SECTION OF PAGE ***
+
+<script type='text/javascript'>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+	var gads = document.createElement('script');
+	gads.async = true;
+	gads.type = 'text/javascript';
+	var useSSL = 'https:' == document.location.protocol;
+	gads.src = (useSSL ? 'https:' : 'http:') + 
+	'//www.googletagservices.com/tag/js/gpt.js';
+	var node = document.getElementsByTagName('script')[0];
+	node.parentNode.insertBefore(gads, node);
+	})();
+</script>
+<script type='text/javascript'>
+	googletag.cmd.push(function() {
+	var responsive = googletag.sizeMapping().addSize([0, 0], [320, 50]).addSize([768, 0], [728, 90]).build();
+	googletag.defineSlot('/7000/Hopman_Cup/Home', [300, 250], 'div-gpt-ad-medrec-1').setTargeting('pos',['1']).addService(googletag.pubads());
+	googletag.defineSlot('/7000/Hopman_Cup/Home', [728, 90], 'div-gpt-ad-leaderboard-1').defineSizeMapping(responsive).setTargeting('pos',['1']).addService(googletag.pubads());
+	googletag.pubads().collapseEmptyDivs();
+	googletag.pubads().enableAsyncRendering();
+googletag.enableServices();
+	});
+</script>
+
+
+*** PLACE IN BODY SECTION OF PAGE WHERE YOU WANT THE AD TO APPEAR ***
+
+<div id='div-gpt-ad-medrec-1'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-medrec-1'); });
+	</script>
+</div>
+
+
+<div id='div-gpt-ad-leaderboard-1'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-leaderboard-1'); });
+	</script>
+</div>

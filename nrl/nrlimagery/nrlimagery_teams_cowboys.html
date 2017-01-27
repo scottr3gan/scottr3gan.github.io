@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--- Start: DFP GPT header script --->
+<!--- Place this code within the <HEAD> section of the page --->
+<!--- Or as close to the top of the <BODY> section as possible --->
+<script type="text/javascript">
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement("script");
+   gads.async = true;
+   gads.type = "text/javascript";
+   var useSSL = "https:" == document.location.protocol;
+   gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+   var node =document.getElementsByTagName("script")[0];
+   node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+<!--- End: DFP GPT header script --->
+<!--- Start: DFP GPT ad slot declaration --->
+<script type="text/javascript">
+googletag.cmd.push(function () {
+    var adunit_name = "collections/teams/cowboys"	// Update with section/subsection value where required
+
+	var kvArray = adunit_name.split( '/' );
+		var kvSec1 = kvArray[0];
+		var kvSec2 = kvArray[1];
+		var kvSec3 = kvArray[2];
+
+	var slot1 = googletag.defineSlot('/78756360/NRLImagery/' + adunit_name, [300, 250],'div-gpt-ad-slot1')
+        .addService(googletag.pubads()).setTargeting('pos', '1')
+
+	googletag.pubads().setTargeting("sec1",[kvSec1]).setTargeting("sec2",[kvSec2]).setTargeting("sec3",[kvSec3])	// Kev-values for section/subsection targeting
+	googletag.pubads().setTargeting("year",["2016"])	// Update value for different years
+	googletag.pubads().enableAsyncRendering();
+   	googletag.pubads().collapseEmptyDivs(true);
+   	googletag.enableServices();
+});
+</script>
+<!--- End: DFP GPT ad slot declaration --->
+</head>
+<body>
+<!--- Place each ad slot div in the <BODY> where you want the ad to render on the page --->
+
+<p>Ad slot 1: 300x250</p>
+<div id="div-gpt-ad-slot1">
+	<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		googletag.display('div-gpt-ad-slot1');
+	});
+  </script>
+</div>
+<p></p>
+	
+</body>
+</html>

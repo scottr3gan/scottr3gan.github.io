@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--- Start: DFP GPT header script --->
+<!--- Place this code within the <HEAD> section of the page --->
+<!--- Or as close to the top of the <BODY> section as possible --->
+<!--- NRL Imagery - home page --->
+<!--- Ad unit: /78756360/NRLImagery/home --->
+<script type="text/javascript">
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement("script");
+   gads.async = true;
+   gads.type = "text/javascript";
+   var useSSL = "https:" == document.location.protocol;
+   gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+   var node =document.getElementsByTagName("script")[0];
+   node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+<script type="text/javascript">
+googletag.cmd.push(function () {
+    var adunit_name = "test1/test2"
+	var kvArray = adunit_name.split( '/' );
+	var kvSec1 = kvArray[0];
+	var kvSec2 = kvArray[1];
+	var kvSec3 = kvArray[2];
+//	var queryStr = window.location.search;
+//	var adtestKVArray = queryStr.split('?adtest=');
+//	var adtestKV = adtestKVArray[1];
+
+	var mappingslot1 = googletag.sizeMapping().
+		addSize([992, 0], [300, 600]).
+		addSize([0, 0], [300, 250]).build();
+	var slot1 = googletag.defineSlot('/267198596/TestSite/' + adunit_name, [300, 250],'div-gpt-ad-slot1').defineSizeMapping(mappingslot1)
+        .addService(googletag.pubads()).setTargeting('pos', '1')
+
+	googletag.pubads().setTargeting("sec1",[kvSec1]).setTargeting("sec2",[kvSec2]).setTargeting("sec3",[kvSec3])
+//	googletag.pubads().setTargeting("adtest",[adtestKV]);
+	googletag.pubads().enableAsyncRendering();
+   	googletag.pubads().collapseEmptyDivs(true);
+   	googletag.enableServices();
+    });
+</script>
+<!--- End: DFP GPT header script --->
+</head>
+<body>
+
+
+<p>Ad slot 1: 300x600 / 300x250</p>
+<div id="div-gpt-ad-slot1">
+	<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		googletag.display('div-gpt-ad-slot1');
+	});
+  </script>
+</div>
+<p></p>
+
+	
+</body>
+</html>	
+	
+	
+	
+	
