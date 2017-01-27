@@ -1,0 +1,80 @@
+<html>
+<head>
+<!-- Start GPT header script -->
+<script type="text/javascript">
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement("script");
+   gads.async = true;
+   gads.type = "text/javascript";
+   var useSSL = "https:" == document.location.protocol;
+   gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+   var node =document.getElementsByTagName("script")[0];
+   node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+<!-- End GPT header script --> 
+<!--- Start Krux interchange snippet -->
+<script>
+window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+(function(){
+  function retrieve(n){
+    var m, k='kx'+n;
+    if (window.localStorage) {
+        return window.localStorage[k] || "";
+    } else if (navigator.cookieEnabled) {
+        m = document.cookie.match(k+'=([^;]*)');
+        return (m && unescape(m[1])) || "";
+    } else {
+        return '';
+    }
+  }
+  Krux.user = retrieve('user');
+  Krux.segments = retrieve('segs') && retrieve('segs').split(',') || [];
+})();
+</script>
+<!--- End Krux interchange snippet -->
+</head>
+<body>
+
+
+<p>728x90/320x50</p>
+
+<div id="div-gpt-ad-leaderboard-1">
+  <script type='text/javascript'>
+    googletag.cmd.push(function() {
+      var responsive = googletag.sizeMapping()
+		.addSize([0, 0], [320, 50])
+		.addSize([980, 0], [728, 90])
+		.build();
+	  googletag.defineSlot('/13534306/MoneyMag/', [728, 90],'div-gpt-ad-leaderboard-1')
+		.defineSizeMapping(responsive)
+        .addService(googletag.pubads())
+		.setTargeting('pos', '1')
+		.setTargeting('kuid', Krux.user);
+		googletag.enableServices();
+      googletag.display('div-gpt-ad-leaderboard-1');
+  });
+  </script>
+</div>
+
+<p>300x250</p>
+
+<div id="div-gpt-ad-medrec-1">
+  <script type='text/javascript'>
+    googletag.cmd.push(function() {
+	  googletag.defineSlot('/13534306/MoneyMag/', [300, 250],'div-gpt-ad-medrec-1')
+        .addService(googletag.pubads())
+		.setTargeting('pos', '1')
+		.setTargeting('kuid', Krux.user);
+		googletag.enableServices();
+      googletag.display('div-gpt-ad-medrec-1');
+  });
+  </script>
+</div>
+
+
+
+</body>
+</html>

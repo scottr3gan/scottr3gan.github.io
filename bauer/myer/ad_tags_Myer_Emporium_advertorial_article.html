@@ -1,0 +1,81 @@
+<html>
+<head>
+<!-- Start GPT header script -->
+<script type='text/javascript'>
+	var gptadslots=[];
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function(){ var gads = document.createElement('script');
+		gads.async = true; gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+<!-- End GPT header script --> 
+<!-- Start Krux interchange snippet -->
+window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+(function(){
+  function retrieve(n){
+    var m, k='kx'+n;
+    if (window.localStorage) {
+        return window.localStorage[k] || "";
+    } else if (navigator.cookieEnabled) {
+        m = document.cookie.match(k+'=([^;]*)');
+        return (m && unescape(m[1])) || "";
+    } else {
+        return '';
+    }
+  }
+  Krux.user = retrieve('user');
+  Krux.segments = retrieve('segs') && retrieve('segs').split(',') || [];
+})();
+<!-- End Krux interchange snippet -->
+<!-- Start GPT ad slot declaration -->
+googletag.cmd.push(function() {
+	var mapLeaderboard = googletag.sizeMapping().addSize([0, 0], [320, 50]).addSize([768, 0], [728, 90]).build();
+
+	gptadslots[0]= googletag.defineOutOfPageSlot('/13534306/Emporium/advertorial', 'div-gpt-ad-oop').addService(googletag.pubads());
+	gptadslots[1]= googletag.defineSlot('/13534306/Emporium/advertorial', [728,90],'div-gpt-ad-Leaderboard-1').defineSizeMapping(mapLeaderboard).setTargeting('pos',['1']).addService(googletag.pubads());
+	gptadslots[2]= googletag.defineSlot('/13534306/Emporium/advertorial', [728,90],'div-gpt-ad-Leaderboard-2').defineSizeMapping(mapLeaderboard).setTargeting('pos',['2']).addService(googletag.pubads());
+	
+	googletag.pubads().enableSingleRequest();
+	googletag.pubads().setTargeting('pagetype',['article']);
+	googletag.pubads().setTargeting('pageId', ['pageid']);
+	googletag.pubads().setTargeting('kuid', Krux.user);
+	googletag.pubads().collapseEmptyDivs();
+	googletag.pubads().enableAsyncRendering();
+googletag.enableServices();
+	});
+</script>
+<!-- End GPT ad slot declaration -->
+
+</head>
+<body>
+<p>
+<!-- Start out of page ad slot -->
+<div id='div-gpt-ad-oop'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-oop'); });
+	</script>
+</div>
+<!-- End out of page ad slot -->
+<p>
+<!-- Start Leaderboard pos 1 ad slot -->
+<div id='div-gpt-ad-Leaderboard-1'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-Leaderboard-1'); });
+	</script>
+</div>
+<!-- End Leaderboard pos 1 ad slot -->
+<p>
+<!-- Start Leaderboard pos 2 ad slot -->
+<div id='div-gpt-ad-Leaderboard-2'>
+	<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-Leaderboard-2'); });
+	</script>
+</div>
+<!-- End Leaderboard pos 2 ad slot -->
+
+</body>
+</html>
