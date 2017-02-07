@@ -1,0 +1,8 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  (function() {
+    var digiData = window.digitalData || {},
+        titan = digiData.titan || {},
+        adKeyValues = titan.adKeyValues || {};
+    new Image().src = "http://fairfaxau.demdex.net/event?c_adsite=huffingtonpost&c_cat=" + adKeyValues.cat + "&c_cat1=" + (adKeyValues.cat1 || "") + "&c_ctype=" + adKeyValues.ctype;
+})();
+});

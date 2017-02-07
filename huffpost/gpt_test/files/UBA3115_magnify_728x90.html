@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0184)http://s0.2mdn.net/ads/richmedia/studio/pv2/47074650/20161220183240540/UBA3115_magnify_728x90/UBA3115_magnify_728x90.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=48gMOuid3s&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Studio Enabler Required -->
+<script src="./Enabler_01_146.js.download"> </script>
+
+
+
+<style type="text/css">
+
+    /** Global **/
+    @charset "UTF-8";
+    * { margin:0;padding:0; font-size:0;}
+ 	div {position:absolute; display:block; overflow:hidden;}
+
+    #loading_image_dc {
+        left:50%;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:10px;
+        top:50%;
+    }
+
+    #container_dc {
+        width: 100%;
+        height: 100%;
+    }
+    #content_dc, #background_exit_dc, #bg, #fade {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Invisible button for background clickthrough. */
+    #background_exit_dc {
+        top: 0px;
+        left: 0px;
+        padding: 0; margin: 0; border: 0;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 400;
+    }
+
+    :focus {outline:none;}
+    ::-moz-focus-inner {border:0;}
+
+</style>
+
+<script language="javascript">
+    //Initialize Enabler
+    if (Enabler.isInitialized()) {
+        init();
+    } else {
+        Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+    }
+    //Run when Enabler is ready
+    function init(){
+       
+        if(Enabler.isPageLoaded()){
+            politeInit();
+        }else{
+            Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+        } 
+    }
+    
+    var loadedJsNum = 0;
+    var jsObj = [
+		"https://s0.2mdn.net/ads/studio/cached_libs/easeljs_0.8.1_58add2e69ca7fbe25e8f82a2b5f6a510_min.js",
+		"https://s0.2mdn.net/ads/studio/cached_libs/tweenjs_0.6.1_40840f08e9fb382ae9e4a337da542ed5_min.js",
+		"https://s0.2mdn.net/ads/studio/cached_libs/movieclip_0.8.1_927f07f1635e6a2a1aa76e79f9decf86_min.js",
+		"https://s0.2mdn.net/ads/studio/cached_libs/preloadjs_0.6.1_ab03d7dc94f6d4fae428f99662cd5819_min.js",
+        Enabler.getUrl("UBA3115_magnify_728x90.js")
+    ];
+
+    function politeInit(){
+
+        //Load in Javascript
+        console.log("loading js : "+jsObj[loadedJsNum]);
+        loadJs(jsObj[loadedJsNum]);
+
+    }
+
+    function checkLoaded(){
+
+        console.log("loaded  js : "+jsObj[loadedJsNum]);
+        if(loadedJsNum == (jsObj.length-1)){
+            //starts animation
+            document.getElementById('loading_image_dc').style.display = "none";
+            document.getElementById('background_exit_dc').addEventListener('click', bgExitHandler, false);
+
+            document.getElementById('container_dc').style.width = document.getElementById('canvas').width+"px";
+            document.getElementById('container_dc').style.height = document.getElementById('canvas').height+"px";
+
+            initCanvas();
+        }
+        else {
+            loadedJsNum+=1; 
+            loadJs(jsObj[loadedJsNum]);
+        }
+    }
+
+    function loadJs(jsUrl){
+
+        console.log("loading js : "+jsObj[loadedJsNum]);
+
+        var extJavascript = document.createElement('script');
+        extJavascript.onload = function(){ checkLoaded(); };
+        extJavascript.src = jsUrl;
+        document.getElementsByTagName('head')[0].appendChild(extJavascript);
+
+    }
+
+	function bgExitHandler(e) {
+		//Call Exits
+		Enabler.exit('HTML5_Background_Clickthrough');
+	}
+
+</script>
+
+<!--
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="UBA3115_magnify_728x90.js"></script>
+-->
+
+<script>
+var canvas, stage, exportRoot;
+function initCanvas() {
+	// --- write your JS code here ---
+	
+	canvas = document.getElementById("canvas");
+	exportRoot = new lib.UBA3115_magnify_728x90();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+</script>
+
+<!-- write your code here -->
+
+<script src="./easeljs_0.8.1_58add2e69ca7fbe25e8f82a2b5f6a510_min.js.download"></script><script src="./tweenjs_0.6.1_40840f08e9fb382ae9e4a337da542ed5_min.js.download"></script><script src="./movieclip_0.8.1_927f07f1635e6a2a1aa76e79f9decf86_min.js.download"></script><script src="./preloadjs_0.6.1_ab03d7dc94f6d4fae428f99662cd5819_min.js.download"></script><script src="./UBA3115_magnify_728x90.js.download"></script></head>
+
+<body>
+    <div id="container_dc" style="width: 728px; height: 90px;">
+        <div id="content_dc">
+            <canvas id="canvas" width="728" height="90" style="background-color:#FFFFFF"></canvas>
+        </div>
+
+        <div id="loading_image_dc" style="display: none;">Loading...</div>    
+
+        <button id="background_exit_dc"></button>
+    </div>   
+
+
+
+
+</body></html>
