@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--- Start: CMS targeting variables --->
+<script type="text/javascript">
+	window.cat = "entertainment/music"
+	window.sponsored = "nosponsor"
+	window.pageID = "12345678"  // unique ID for page
+	window.ctype = "index" // homepage, index, article, gallery, video
+</script>
+<!--- End: CMS targeting variables --->
+<!--- Start: DFP GPT header script --->
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+</script>
+<script type="text/javascript">
+googletag.cmd.push(function () {
+
+	function getQueryVariable(variable) // Ad Tester (add "?adtest=testvalue" to url, inserts KV for targeting)
+	{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+	}
+	var kvAdTest =  getQueryVariable("adtest");
+
+	var adNetwork = "267198596"
+//	var adNetwork = "TBC for Huff Post"
+//	var adSite = "huffingtonpostAU"
+	var adSite = "TestSite"
+	var adZone = window.cat
+	var kvSponsor = window.sponsored
+	var kvPageID = window.pageID
+	var kvCType = window.ctype
+	var adUnitPath = adNetwork + '/' + adSite + '/' + adZone 
+	var kvArray = adZone.split( '/' );
+		var kvCat1 = kvArray[0];
+		var kvCat2 = kvArray[1];
+		var kvCat3 = kvArray[2];
+	
+	var slot0 = googletag.defineOutOfPageSlot(adUnitPath, 'adspot-interstitial').addService(googletag.pubads());		
+	
+	var slot1 = googletag.defineSlot(adUnitPath, [[996, 120],[970, 250],[940, 250],[940, 120],[728, 90]],'adspot-996x120_970x250_940x250_940x120_728x90-pos1')
+		.addService(googletag.pubads()).setTargeting('pos', '1')
+
+	var slot2 = googletag.defineSlot(adUnitPath, [[300, 600],[300, 250]],'adspot-300x600_300x250-pos1')
+		.addService(googletag.pubads()).setTargeting('pos', '1')
+
+	var slot3 = googletag.defineSlot(adUnitPath, [[300, 250]],'adspot-300x250-pos2')
+		.addService(googletag.pubads()).setTargeting('pos', '2')
+
+	googletag.pubads()
+	.setTargeting("ctype",[kvCType])
+	.setTargeting("sponsored",[kvSponsor])
+	.setTargeting("pageid",[kvPageID])
+	.setTargeting("adtest",[kvAdTest])
+	.setTargeting("cat1",[kvCat1]).setTargeting("cat2",[kvCat2]).setTargeting("cat3",[kvCat3])
+	
+	googletag.pubads().enableAsyncRendering();
+   	googletag.pubads().collapseEmptyDivs(true);
+	googletag.pubads().setCentering(true);
+	googletag.pubads().enableSingleRequest();   	
+	googletag.enableServices();
+});
+</script>
+<!--- End: DFP GPT header script --->
+</head>
+<body>
+
+<p>adspot-996x120_970x250_940x250_940x120_728x90-pos1</p>
+<div id="adspot-996x120_970x250_940x250_940x120_728x90-pos1">
+	<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		googletag.display('adspot-996x120_970x250_940x250_940x120_728x90-pos1');
+	});
+  </script>
+</div>
+
+<p>adspot-300x600_300x250-pos1</p>
+<div id="adspot-300x600_300x250-pos1">
+	<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		googletag.display('adspot-300x600_300x250-pos1');
+	});
+  </script>
+</div>
+	
+<p>adspot-300x250-pos2</p>
+<div id="adspot-300x250-pos2">
+	<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		googletag.display('adspot-300x250-pos2');
+	});
+  </script>
+</div>
+
+<p>adspot-interstitial</p>
+<div id="adspot-interstitial" style="display:none;">
+	<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		googletag.display('adspot-interstitial');
+	});
+  </script>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta name="description" content="Lazy loading test: lazysizes.js">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
+<!-- Start GPT Async Tag -->
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script type="text/javascript">
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+	googletag.cmd.push(function() {
+
+    var mapBanner = googletag.sizeMapping()
+		.addSize([0, 0], [[320, 100],[320, 50]])
+		.addSize([767, 0], [[728, 90]])
+		.addSize([996, 0], [[728, 90],[970, 250],[970, 90]])
+		.build();
+    var mapHalfPage = googletag.sizeMapping().addSize([0, 0], []).addSize([1024, 0], [[300, 600]]).build();
+    var mapMedRec = googletag.sizeMapping().addSize([0, 0], []).addSize([1024, 0], [[300, 250]]).build();
+
+    window.banner1 = googletag.defineSlot('/267198596/TestSite', [[728,90]], 'div-gpt-ad-banner-1')
+		.defineSizeMapping(mapBanner)
+		.setTargeting('pos', ['1'])
+		.addService(googletag.pubads());
+
+    window.native1 = googletag.defineSlot('/267198596/TestSite', 'fluid', 'div-gpt-ad-native-1')
+                .setTargeting('pos', ['1'])
+		.addService(googletag.pubads());
+ 
+    window.halfpage = googletag.defineSlot('/267198596/TestSite', [[300, 600]], 'div-gpt-ad-halfpage-1')
+		.defineSizeMapping(mapHalfPage)
+		.setTargeting('pos', ['1'])
+		.addService(googletag.pubads());
+ 
+    window.medrec = googletag.defineSlot('/267198596/TestSite', [[300, 250]], 'div-gpt-ad-medrec-1')
+		.defineSizeMapping(mapMedRec)
+		.setTargeting('pos', ['1'])
+		.addService(googletag.pubads());
+		
+    window.bannerFooter = googletag.defineSlot('/267198596/TestSite', [[728,90]], 'div-gpt-ad-banner-2')
+		.defineSizeMapping(mapBanner)
+		.setTargeting('pos', ['2'])
+		.addService(googletag.pubads());
+		
+    googletag.pubads()
+		.setTargeting('env', ['lazyload']);
+	googletag.pubads().enableSingleRequest();   	
+	googletag.pubads().collapseEmptyDivs();
+	googletag.pubads().enableAsyncRendering();
+	googletag.pubads().disableInitialLoad();
+	googletag.pubads().setCentering(true);
+    googletag.enableServices();
+  });
+</script>
+<!-- End GPT Async Tag -->
+<style>font-family: roboto, arial</style>
+</head>
+<body>
+<script type="text/javascript">
+ document.addEventListener('lazybeforeunveil', function(e){
+    var ad_slot = e.target.getAttribute('data-ad-slot');
+    if(ad_slot){
+      googletag.cmd.push(function () {
+        googletag.pubads().refresh([ window[ad_slot] ]);
+      });
+    }
+});
+</script>
+
+<p>Header: Mobile Banner 320x100/320x50 (up to 768px), Leaderboard 728x90 (above 768px)</p>
+<div id="div-gpt-ad-banner-1">
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-banner-1');
+        googletag.pubads().refresh([banner1])
+	});
+  </script>
+</div>
+
+
+<p>Native ad (example styling)</p>
+<div id="div-gpt-ad-native-1">
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-native-1'); 
+        googletag.pubads().refresh([native1])
+	});
+  </script>
+</div>
+
+<div align="center" style="font-family: roboto, arial; height: 750px; width: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5">This space intentionally left blank</div>
+
+<p>Half Page 300x600 (above 1024px)</p>
+<div id="div-gpt-ad-halfpage-1" class="lazyload" data-ad-slot="halfpage1">
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-halfpage-1'); 
+	});
+  </script>
+</div>
+
+<div align="center" style="font-family: roboto, arial; height: 750px; width: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5">This space intentionally left blank</div>
+
+<p>Med Rec 300x250 (above 1024px)</p>
+<div id="div-gpt-ad-medrec-1" class="lazyload" data-ad-slot="medrec1">
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-medrec-1'); 
+	});
+  </script>
+</div>
+
+<div align="center" style="font-family: roboto, arial; height: 750px; width: 100%; display: flex; justify-content: center; align-items: center; background-color: #f5f5f5">This space intentionally left blank</div>
+
+<p>Footer: Mobile Banner 320x100/320x50 (up to 768px), Leaderboard 728x90 (above 768px)</p>
+<div id="div-gpt-ad-banner-2"  class="lazyload" data-ad-slot="banner2">
+  <script>
+    googletag.cmd.push(function() {
+	googletag.display('div-gpt-ad-banner-2'); 
+	});
+  </script>
+</div>
+
+</body>
+</html>
