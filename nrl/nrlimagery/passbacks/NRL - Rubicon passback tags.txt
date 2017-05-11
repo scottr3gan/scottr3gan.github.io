@@ -1,0 +1,53 @@
+<!-- NRL Imagery 728x90 passback -->
+<div data-glade data-ad-unit-path="/78756360/NRLImagery/passback" width="728" height="90" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Imagery 300x250 passback -->
+<div data-glade data-ad-unit-path="/78756360/NRLImagery/passback" width="300" height="250" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Imagery 300x600 passback -->
+<div data-glade data-ad-unit-path="/78756360/NRLImagery/passback" width="300" height="600" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Imagery 320x50 passback -->
+<div data-glade data-ad-unit-path="/78756360/NRLImagery/passback" width="320" height="50" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Grassroots 728x90 passback -->
+<div data-glade data-ad-unit-path="/78756360/NRL_Grassroots/passback" width="728" height="90" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Grassroots 300x250 passback -->
+<div data-glade data-ad-unit-path="/78756360/NRL_Grassroots/passback" width="300" height="250" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Grassroots 320x50 passback -->
+<div data-glade data-ad-unit-path="/78756360/NRL_Grassroots/passback" width="320" height="50" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- Touch Football Australia 728x90 passback -->
+<div data-glade data-ad-unit-path="/78756360/TouchFootballAustralia/passback" width="728" height="90" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- Touch Football Australia 300x250 passback -->
+<div data-glade data-ad-unit-path="/78756360/TouchFootballAustralia/passback" width="300" height="250" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- Touch Football Australia 320x50 passback -->
+<div data-glade data-ad-unit-path="/78756360/TouchFootballAustralia/passback" width="320" height="50" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Rookie 728x90 passback -->
+<div data-glade data-ad-unit-path="/148204258/nrlrookie-passback" width="728" height="90" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Rookie 300x250 passback -->
+<div data-glade data-ad-unit-path="/148204258/nrlrookie-passback" width="300" height="250" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+<!-- NRL Rookie 300x600 passback -->
+<div data-glade data-ad-unit-path="/148204258/nrlrookie-passback" width="300" height="600" data-json='{"targeting":{"passback":["rubicon"]}}'></div>
+<script async='async' src='https://securepubads.g.doubleclick.net/static/glade.js'></script>
+
+

@@ -1,0 +1,26 @@
+<amp-ad width="320" height="50"
+	type="doubleclick"
+	data-slot="/6411/mobile-huffingtonpostAU-amp/sport"
+	json='{"targeting":{"pos":["1"]},"ctype":["amp"]}'>
+</amp-ad>
+
+<amp-ad width="300" height="250"
+	type="doubleclick"
+	data-slot="/6411/mobile-huffingtonpostAU-amp/sport"
+	json='{"targeting":{"pos":["2"]},"ctype":["amp"]}'>
+</amp-ad>
+
+
+<amp-ad width="320" height="50"
+	type="doubleclick"
+	data-slot="/6411/mobile-huffingtonpostAU/amp"
+	json='{"targeting":{"pos":["1"]},"ctype":["amp"],"cat":["sport"]}'>
+</amp-ad>
+
+<amp-ad width="300" height="250"
+	type="doubleclick"
+	data-slot="/6411/mobile-huffingtonpostAU/amp"
+	json='{"targeting":{"pos":["2"]},"ctype":["amp"],"cat":["sport"]}'>
+</amp-ad>
+
+
