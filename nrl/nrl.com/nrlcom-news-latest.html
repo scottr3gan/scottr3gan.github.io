@@ -39,6 +39,7 @@ googletag.cmd.push(function () {
 		var kvSec1 = kvArray[0];
 		var kvSec2 = kvArray[1];
 		var kvSec3 = kvArray[2];
+		var kvSec4 = kvArray[3];
 	
 	var slot0 = googletag.defineOutOfPageSlot(adUnitPath, 'dfp-ad-oop')
 		.addService(googletag.pubads()).setTargeting('pos', '0')		
@@ -62,7 +63,7 @@ googletag.cmd.push(function () {
 	.setTargeting("pagetype",[kvPType])
 	.setTargeting("pageid",[kvPageID])
 	.setTargeting("adtest",[kvAdTest])
-	.setTargeting("sec1",[kvSec1]).setTargeting("sec2",[kvSec2]).setTargeting("sec3",[kvSec3])
+	.setTargeting("sec1",[kvSec1]).setTargeting("sec2",[kvSec2]).setTargeting("sec3",[kvSec3]).setTargeting("sec4",[kvSec4])
 	
 	googletag.pubads().enableAsyncRendering();
 	googletag.pubads().collapseEmptyDivs(true);
@@ -122,4 +123,4 @@ googletag.cmd.push(function () {
 </div>
 	
 </body>
-</html>
+</html>	
