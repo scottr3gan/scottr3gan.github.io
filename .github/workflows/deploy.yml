@@ -26,13 +26,21 @@ jobs:
 
       - name: Inject No-Index Meta Tags
         run: |
-          echo "Scanning and injecting noindex tags into HTML files..."
-          find . -name "*.html" | while read -r file; do
+          echo "Scanning all directories for HTML files..."
+          
+          # Force match tracking targets explicitly
+          TARGET_TAG='<meta name="robots" content="noindex, nofollow, noarchive">'
+          
+          # Recursively find every HTML file, regardless of folder depth
+          find . -type f -name "*.html" | while read -r file; do
+            # Convert file path to lowercase for safe checking
             if ! grep -q -i 'name="robots"' "$file"; then
-              echo "Injecting tag into: $file"
-              sed -i '/<head>/I a \    <meta name="robots" content="noindex, nofollow, noarchive">' "$file"
+              echo "Target found: Modifying $file"
+              
+              # This covers <head>, <HEAD>, and spaces like <head   >
+              sed -i -E 's/(<head[^>]*>)/\1\n    <meta name="robots" content="noindex, nofollow, noarchive">/I' "$file"
             else
-              echo "Skipping (already protected): $file"
+              echo "Skipping protected layout: $file"
             fi
           done
 
