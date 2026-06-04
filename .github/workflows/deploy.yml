@@ -1,0 +1,58 @@
+name: Secure Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"] # Change to "master" if your repository uses master
+  workflow_dispatch: # Allows you to trigger this manually from the Actions tab
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps: deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Inject No-Index Meta Tags
+        run: |
+          echo "Scanning and injecting noindex tags into HTML files..."
+          
+          # Target string to look for
+          TARGET_TAG='<meta name="robots" content="noindex, nofollow, noarchive">'
+          
+          # Find all .html files recursively
+          find . -name "*.html" | while read -r file; do
+            # Check if the file already contains a robots meta tag to avoid duplication
+            if ! grep -q -i 'name="robots"' "$file"; then
+              echo "Injecting tag into: $file"
+              # Injects the target tag directly below the opening <head> tag (case-insensitive)
+              sed -i '/<head>/I a \    <meta name="robots" content="noindex, nofollow, noarchive">' "$file"
+            else
+              echo "Skipping (already protected): $file"
+            fi
+          done
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Uploads the entire root directory containing your injected files
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

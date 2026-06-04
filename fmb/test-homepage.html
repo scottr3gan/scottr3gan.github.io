@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+<!-- Start GPT Tag - All pages -->
+<script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous" async></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  
+  (function() {
+    var lockoutPaths = [
+      "/",
+      "/features/what-makes-mountain-biking-in-alice-springs-so-special/",
+      "/post-all/shimano-gravel-muster-2026/"
+    ];
+
+    var path = window.location.pathname;
+    var isMatched = lockoutPaths.some(function(item) {
+      return item === "/" ? path === "/" : path.includes(item);
+    });
+
+    var postid = "<?php global $post; echo $post ? $post->ID : ''; ?>";
+    var sponsored = isMatched ? "Y" : "N";
+    var fn_pageskin = (screen.width >= 1580) ? "true" : "false";
+    var pageTitle = (path.split('/').filter(Boolean).map(decodeURIComponent).at(-1) || 'default-title').slice(0, 39);
+    var adtest = (new URLSearchParams(window.location.search)).get('adtest') ?? 'false';
+
+    window.gamPage = {
+      targeting: { postid, sponsored, inskin_yes: fn_pageskin, title: pageTitle, adtest }
+    };
+  })();
+
+  googletag.cmd.push(function() {
+    // Single-line cleanup: converts to entries, filters out empty/undefined values, and rebuilds the object
+    var cleanTargeting = Object.fromEntries(
+      Object.entries(window.gamPage.targeting).filter(([_, v]) => v !== undefined && v !== '')
+    );
+    googletag.setConfig({ targeting: cleanTargeting });
+  });
+</script>
+
+
+<!-- Start GPT Tag - Homepage -->
+<script>
+  googletag.cmd.push(function() {
+    var gamData = {
+      adUnit: "/30025404/flowmountainbike.home",
+      sizeMap: {
+        widebanner: [[[1900,0],[[1900,250],[970,250]]],[[1000,0],[[970,250],[728,90]]],[[768,0],[728,90]],[[0,0],[[320,50],[320,100]]]],
+        halfpage: [[[1180,0],[300,600]],[[0,0],[]]],
+        banner: [[[767,0],[728,90]],[[0,0],[[300,250],[320,50],[320,100]]]]
+      }
+    };
+
+    googletag.setConfig({
+      targeting: window.gamPage ? window.gamPage.targeting : {},
+      collapseDiv: 'ON_NO_FILL',
+      centering: true,
+      lazyLoad: { fetchMarginPercent: 200, renderMarginPercent: 25, mobileScaling: 2.0 }
+    });
+
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      const gamDivAnchor = googletag.defineOutOfPageSlot(gamData.adUnit, googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+      if (gamDivAnchor) {
+        gamDivAnchor.addService(googletag.pubads()).setConfig({ targeting: { POS: '0', format: 'anchor' } });
+        googletag.display(gamDivAnchor);
+      }
+    }
+
+
+    const gamDiv1 = googletag.defineSlot(gamData.adUnit, [[728,90],[320,50]], 'div-1')
+    .defineSizeMapping(gamData.sizeMap.widebanner).addService(googletag.pubads());
+    gamDiv1.setConfig({ targeting: { POS: '1' } });
+
+    const gamDiv2 = googletag.defineSlot(gamData.adUnit, [300,600], 'div-2')
+    .defineSizeMapping(gamData.sizeMap.halfpage).addService(googletag.pubads());
+    gamDiv2.setConfig({ targeting: { POS: '2' } });
+
+    const gamDiv3 = googletag.defineSlot(gamData.adUnit, [[728,90],[320,50]], 'div-3')
+    .defineSizeMapping(gamData.sizeMap.banner).addService(googletag.pubads());
+    gamDiv3.setConfig({ targeting: { POS: '3' } });
+
+    const gamDiv4 = googletag.defineSlot(gamData.adUnit, [[728,90],[320,50]], 'div-4')
+    .defineSizeMapping(gamData.sizeMap.banner).addService(googletag.pubads());
+    gamDiv4.setConfig({ targeting: { POS: '4' } });
+
+    const gamDiv5 = googletag.defineSlot(gamData.adUnit, [[728,90],[320,50]], 'div-5')
+    .defineSizeMapping(gamData.sizeMap.banner).addService(googletag.pubads());
+    gamDiv5.setConfig({ targeting: { POS: '5' } });
+
+    googletag.enableServices();
+  });
+</script>
+
+  </head>
+  <body>
+    <p></p>
+    <div id='div-1'>
+      <script>
+        googletag.cmd.push(function() { googletag.display('div-1'); });
+      </script>
+    </div>
+    <p></p>
+    <div id='div-2'>
+      <script>
+        googletag.cmd.push(function() { googletag.display('div-2'); });
+      </script>
+    </div>
+    <p></p>
+    <div id='div-3'>
+      <script>
+        googletag.cmd.push(function() { googletag.display('div-3'); });
+      </script>
+    </div>
+    <p></p>
+    <div id='div-4'>
+      <script>
+        googletag.cmd.push(function() { googletag.display('div-4'); });
+      </script>
+    </div>
+    <p></p>
+    <div id='div-5'>
+      <script>
+        googletag.cmd.push(function() { googletag.display('div-5'); });
+      </script>
+    </div>
+
+
+
+
+  </body>
+</html>
